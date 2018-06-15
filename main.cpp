@@ -11,8 +11,7 @@ int main() {
     cout << "Enter a letter grade: ";
     cin >> gradeLetter;
 
-    if (gradeLetter[0] == 'A' || gradeLetter[0] == 'B' || gradeLetter[0] == 'C' || gradeLetter[0] == 'D' ||
-        gradeLetter[0] == 'F') {
+    if (gradeLetter[0] >= 'A' && gradeLetter[0] <= 'F') {
         if (gradeLetter == "A") {
             grade = 4;
         } else if (gradeLetter == "A-") {
