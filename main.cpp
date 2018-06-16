@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     string gradeLetter;
-    double grade = 10;
+    double grade;
 
     cout << "Enter a letter grade: ";
     cin >> gradeLetter;
