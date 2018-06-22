@@ -8,15 +8,13 @@ int main() {
     float stockPrice, stockTotal = 0;
     int stockCount = 0, days = 1;
 
-    cout << "In the following statement please enter the closing value of a stock\nin a certain number of days. "
-            "When done enter '-1'.";
+    cout << "In the following statement, please enter the closing value of a stock\nin a certain number of days. "
+            "When done enter '-1'." << endl;
 
     do {
-        cout << "Please enter the closing value for day 1: ";
+        cout << "Please enter the closing value for day " << days << ": ";
         cin >> stockPrice;
-        if (stockPrice == -1) {
-            break;
-        } else {
+        if (stockPrice != -1) {
             stockCount++;
             days++;
             stockTotal += stockPrice;
@@ -24,7 +22,7 @@ int main() {
     } while (stockPrice != -1);
 
     if (stockPrice == -1 && days == 1) {
-        cout << "No stock was entered.";
+        cout << "No stock was entered!";
     } else {
         stockTotal /= stockCount;
         cout << setprecision(4) << fixed;
