@@ -42,5 +42,6 @@ int main() {
     } else {
         cout << "Please enter a letter grade between A-F.";
     }
+    char x = 'a';
 
 }
