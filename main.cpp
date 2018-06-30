@@ -16,17 +16,38 @@ int main() {
     cout << "Wholesale Membership Rewards Calculator\n\n";
     cout << "1. Basic Membership\n2. Standard Membership\n3. Premium Membership\n4. Quit\nEnter your choice: ";
     cin >> x;
-    cout << "Enter your monthly purchase total: $";
-    cin >> y;
-
-    while (x != '4') {
-        double z;
-        if (x == '1') {
-            z = bMembership(y);
-        }
+    while (x < '1' || x > '4') {
+        cout << "Please enter a valid value: ";
+        cin >> x;
     }
+    while (x != '4') {
+        cout << "Enter your monthly purchase total: $";
+        cin >> y;
+        while (y < 0) {
+            cout << "Please enter a non=negative value: ";
+            cin >> y;
+        }
+        double z;
+        switch (x) {
+            case '1':
+                z = bMembership(y);
+                break;
+            case '2':
+                z = sMembership(y);
+                break;
+            case '3':
+                z = pMembership(y);
+                break;
+        }
+        cout << setprecision(0) << fixed;
+        cout << "\nThe rewards balance is $" << z << ".00\n\n";
 
+        cout << "Wholesale Membership Rewards Calculator\n\n";
+        cout << "1. Basic Membership\n2. Standard Membership\n3. Premium Membership\n4. Quit\nEnter your choice: ";
+        cin >> x;
+    }
 }
+
 
 double bMembership(double x) {
     double y;
