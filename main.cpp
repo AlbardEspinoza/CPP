@@ -11,16 +11,16 @@ using namespace std;
 
 int main() {
 
-    char x;
+    int x;
     double y;
     cout << "Wholesale Membership Rewards Calculator\n\n";
     cout << "1. Basic Membership\n2. Standard Membership\n3. Premium Membership\n4. Quit\nEnter your choice: ";
     cin >> x;
-    while (x < '1' || x > '4') {
+    while (x < 1 || x > 4) {
         cout << "Please enter a valid value: ";
         cin >> x;
     }
-    while (x != '4') {
+    while (x != 4) {
         cout << "Enter your monthly purchase total: $";
         cin >> y;
         while (y < 0) {
@@ -29,13 +29,13 @@ int main() {
         }
         double z;
         switch (x) {
-            case '1':
+            case 1:
                 z = bMembership(y);
                 break;
-            case '2':
+            case 2:
                 z = sMembership(y);
                 break;
-            case '3':
+            case 3:
                 z = pMembership(y);
                 break;
         }
