@@ -32,19 +32,18 @@ int main() {
     char choice;
     int car = 0;
 
-    cout << "Please select a choice from the menu: " << endl;
-    cout << "\n1. Enter car sale information" << endl;
-    cout << "2. Change car sale information" << endl;
-    cout << "3. Print car sale information" << endl;
-    cout << "4. Exit" << endl;
-    cout << "Enter choice: ";
-    cin >> choice;
     while (choice != '4') {
+        cout << "\nPlease select a choice from the menu: " << endl;
+        cout << "\n1. Enter car sale information" << endl;
+        cout << "2. Change car sale information" << endl;
+        cout << "3. Print car sale information" << endl;
+        cout << "4. Exit" << endl;
+        cout << "Enter choice: ";
+        cin >> choice;
         while (choice < '1' || choice > '4') {
-            cout << "PLease enter a choice displayed in the menu the menu: ";
+            cout << "PLease enter a choice displayed in the menu: ";
             cin >> choice;
         }
-
 
         switch (choice) {
             case '1':
@@ -62,13 +61,6 @@ int main() {
                 choice3(x, car);
                 break;
         }
-        cout << "\n\nPlease select a choice from the menu: " << endl;
-        cout << "\n1. Enter car sale information" << endl;
-        cout << "2. Change car sale information" << endl;
-        cout << "3. Print car sale information" << endl;
-        cout << "4. Search for information" << endl;
-        cout << "5. Exit" << endl;
-        cin >> choice;
     }
 }
 
@@ -114,7 +106,7 @@ void choice3(Car x[], int num) {
         int y;
         cout << "Which car information would you like to print: ";
         cin >> y;
-        while (y > num) {
+        while (y > num || y <= 0) {
             cout << "Please enter a value that is within the range of cars entered in the program: ";
             cin >> y;
         }
@@ -126,6 +118,3 @@ void choice3(Car x[], int num) {
     }
 
 }
-
-
-
