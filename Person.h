@@ -27,13 +27,13 @@ public:
 
     void setPhoneNumber(string);
 
-    string getName();
+    string getName() const;
 
-    string getAddress();
+    string getAddress() const;
 
-    int getAge();
+    int getAge() const;
 
-    string getPhoneNumber();
+    string getPhoneNumber() const;
 };
 
 

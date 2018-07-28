@@ -30,19 +30,19 @@ void Person::setPhoneNumber(string phone_number) {
     this->phone_number = phone_number;
 }
 
-string Person::getName() {
+string Person::getName() const {
     return this->name;
 }
 
-string Person::getAddress() {
+string Person::getAddress() const {
     return this->address;
 }
 
-int Person::getAge() {
+int Person::getAge() const {
     return this->age;
 }
 
-string Person::getPhoneNumber() {
+string Person::getPhoneNumber() const {
     return this->phone_number;
 
 }
