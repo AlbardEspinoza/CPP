@@ -44,5 +44,4 @@ int Person::getAge() const {
 
 string Person::getPhoneNumber() const {
     return this->phone_number;
-
 }
